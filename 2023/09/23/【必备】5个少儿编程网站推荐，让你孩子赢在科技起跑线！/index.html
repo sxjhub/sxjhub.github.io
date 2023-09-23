@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><meta name="author" content="Xiaoxin"><meta name="renderer" content="webkit"><meta name="copyright" content="Xiaoxin"><meta name="keywords" content="Xiaoxin's Blog"><meta name="description" content=""><meta name="Cache-Control" content="no-cache"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>【必备】5个少儿编程网站推荐，让你孩子赢在科技起跑线！ · Xiaoxin's Blog</title><link rel="stylesheet" href="/css/style.css?v=2018.7.9"><link rel="stylesheet" href="/css/animation.css?v=2018.7.9"><link rel="icon" href="/img/assets/favicon.ico"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.6"><!-- scripts--><script>(function( w ){
+  "use strict";
+  // rel=preload support test
+  if( !w.loadCSS ){
+    w.loadCSS = function(){};
+  }
+  // define on the loadCSS obj
+  var rp = loadCSS.relpreload = {};
+  // rel=preload feature support test
+  // runs once and returns a function for compat purposes
+  rp.support = (function(){
+    var ret;
+    try {
+      ret = w.document.createElement( "link" ).relList.supports( "preload" );
+    } catch (e) {
+      ret = false;
+    }
+    return function(){
+      return ret;
+    };
+  })();
+
+  // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+  // then change that media back to its intended value on load
+  rp.bindMediaToggle = function( link ){
+    // remember existing media attr for ultimate state, or default to 'all'
+    var finalMedia = link.media || "all";
+
+    function enableStylesheet(){
+      link.media = finalMedia;
+    }
+
+    // bind load handlers to enable media
+    if( link.addEventListener ){
+      link.addEventListener( "load", enableStylesheet );
+    } else if( link.attachEvent ){
+      link.attachEvent( "onload", enableStylesheet );
+    }
+
+    // Set rel and non-applicable media type to start an async request
+    // note: timeout allows this to happen async to let rendering continue in IE
+    setTimeout(function(){
+      link.rel = "stylesheet";
+      link.media = "only x";
+    });
+    // also enable media after 3 seconds,
+    // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+    setTimeout( enableStylesheet, 3000 );
+  };
+
+  // loop through link elements in DOM
+  rp.poly = function(){
+    // double check this to prevent external calls from running
+    if( rp.support() ){
+      return;
+    }
+    var links = w.document.getElementsByTagName( "link" );
+    for( var i = 0; i < links.length; i++ ){
+      var link = links[ i ];
+      // qualify links to those with rel=preload and as=style attrs
+      if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+        // prevent rerunning on link
+        link.setAttribute( "data-loadcss", true );
+        // bind listeners to toggle media back
+        rp.bindMediaToggle( link );
+      }
+    }
+  };
+
+  // if unsupported, run the polyfill
+  if( !rp.support() ){
+    // run once at least
+    rp.poly();
+
+    // rerun poly on an interval until onload
+    var run = w.setInterval( rp.poly, 500 );
+    if( w.addEventListener ){
+      w.addEventListener( "load", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    } else if( w.attachEvent ){
+      w.attachEvent( "onload", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    }
+  }
+
+
+  // commonjs
+  if( typeof exports !== "undefined" ){
+    exports.loadCSS = loadCSS;
+  }
+  else {
+    w.loadCSS = loadCSS;
+  }
+}( typeof global !== "undefined" ? global : this ) );</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" defer></script><script src="/js/main.js?v=2018.7.9" defer></script><!-- fancybox--><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script><!-- busuanzi--><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="generator" content="Hexo 6.3.0"></head><body><section class="profile-close" id="cxo-profile"><div class="profile-avatar"><i class="fa fa-caret-left"></i><img src="/img/assets/cat.png"></div><!--.profile-saying
+  i.fa.fa-comment
+  .saying--><div class="cxo-profile-inner"><div class="profile-name">Xiaoxin</div><div class="profile-signature">for me</div><div class="friends"><div>FRIENDS</div><span><a href="https://github.com/cmdxx" target="_black">friendA</a></span><span><a href="//github.com/" target="_black">friendB</a></span><span><a href="//github.com/" target="_black">friendC</a></span></div><div class="read-progress"></div></div></section><header id="cxo-intro" style="height: 70vh;background-image: url(/img/intro/index-bg.png);"><nav id="cxo-intro-nav"><section><div class="intro-nav-title"><a href="/">Xiaoxin's Blog</a></div><div class="intro-nav-label-box"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div><i class="fa fa-bars intro-nav-menu"><div class="intro-nav-drop"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div></i><div class="clear"></div></section></nav><h1 class="post-title">【必备】5个少儿编程网站推荐，让你孩子赢在科技起跑线！</h1><div class="post-intros"><div class="post-intro-meta"><span class="post-intro-time"><i class="post-intro-calendar fa fa-calendar"></i><span>2023-09-23</span></span></div></div></header><article class="cxo-up" id="cxo-content-outer"><section id="cxo-content-inner"><article class="article-entry" id="post"><h2 id="【必备】5个少儿编程网站推荐，让你孩子赢在科技起跑线！"><a href="#【必备】5个少儿编程网站推荐，让你孩子赢在科技起跑线！" class="headerlink" title="【必备】5个少儿编程网站推荐，让你孩子赢在科技起跑线！"></a>【必备】5个少儿编程网站推荐，让你孩子赢在科技起跑线！</h2><h1 id="Code-org"><a href="#Code-org" class="headerlink" title="Code.org"></a>Code.org</h1><p>推荐指数：★★★★★  </p>
+<p>适宜年龄：7-12岁  </p>
+<p>官网网址：<a target="_blank" rel="noopener" href="https://www.code.org/learn">https://www.code.org/learn</a></p>
+<p>简介：Code.org 是一个非盈利性组织，旨在推广编程教育。它的亲少儿编程网站提供各种在线编程课程和活动，由专业教育者、程序员和科学家设计，质量有保障。孩子们还可以在网站上与其他学习者交流、分享编程经验。</p>
+<img src="/2023/09/23/%E3%80%90%E5%BF%85%E5%A4%87%E3%80%915%E4%B8%AA%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90%EF%BC%8C%E8%AE%A9%E4%BD%A0%E5%AD%A9%E5%AD%90%E8%B5%A2%E5%9C%A8%E7%A7%91%E6%8A%80%E8%B5%B7%E8%B7%91%E7%BA%BF%EF%BC%81/1.png" class="" title="这是一张图片">
+
+<hr>
+<h1 id="Tynker"><a href="#Tynker" class="headerlink" title="Tynker"></a>Tynker</h1><p>推荐指数：★★★★☆  </p>
+<p>适宜年龄：6-12岁  </p>
+<p>官网网址：<a target="_blank" rel="noopener" href="https://www.tynker.com/">https://www.tynker.com/</a></p>
+<p>简介：Tynker 是一个寓教于乐的编程平台，其亲少儿编程网站通过游戏化的方式教授编程，让孩子们在轻松愉快的氛围中学习。站内课程丰富，包括编程基础、游戏制作、动画设计等。此外，Tynker 还提供了一些拓展课程，满足孩子们的个性化需求。</p>
+<img src="/2023/09/23/%E3%80%90%E5%BF%85%E5%A4%87%E3%80%915%E4%B8%AA%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90%EF%BC%8C%E8%AE%A9%E4%BD%A0%E5%AD%A9%E5%AD%90%E8%B5%A2%E5%9C%A8%E7%A7%91%E6%8A%80%E8%B5%B7%E8%B7%91%E7%BA%BF%EF%BC%81/2.png" class="" title="这是一张图片">
+<hr>
+<h1 id="ScratchJr"><a href="#ScratchJr" class="headerlink" title="ScratchJr"></a>ScratchJr</h1><p>推荐指数：★★★★☆  </p>
+<p>适宜年龄：5-7岁  </p>
+<p>官网网址：<a target="_blank" rel="noopener" href="https://www.scratchjr.org/">https://www.scratchjr.org/</a>  </p>
+<p>简介：ScratchJr 是针对 5-7 岁儿童开发的编程软件，其亲少儿编程网站提供各种有趣的编程项目。通过拖拽积木块的方式，孩子们可以轻松学会编程基础。此外，ScratchJr 还注重培养孩子们的逻辑思维和创造力，让他们在玩耍的同时收获成长。</p>
+<img src="/2023/09/23/%E3%80%90%E5%BF%85%E5%A4%87%E3%80%915%E4%B8%AA%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90%EF%BC%8C%E8%AE%A9%E4%BD%A0%E5%AD%A9%E5%AD%90%E8%B5%A2%E5%9C%A8%E7%A7%91%E6%8A%80%E8%B5%B7%E8%B7%91%E7%BA%BF%EF%BC%81/3.png" class="" title="这是一张图片">
+<hr>
+<h1 id="Kodable"><a href="#Kodable" class="headerlink" title="Kodable"></a>Kodable</h1><p>推荐指数：★★★☆☆  </p>
+<p>适宜年龄：4-6岁  </p>
+<p>官网网址：<a target="_blank" rel="noopener" href="https://kodable.com/">https://kodable.com/</a>  </p>
+<p>简介：Kodable 是一个专为 4-6 岁儿童设计的编程课程平台，其亲少儿编程网站提供一系列生动有趣的编程课程。课程以游戏的形式呈现，让孩子们在玩耍的过程中学习编程基础。此外，Kodable 还提供了丰富的互动社区功能，让孩子们可以与家长、老师和其他学习者交流心得。  </p>
+<img src="/2023/09/23/%E3%80%90%E5%BF%85%E5%A4%87%E3%80%915%E4%B8%AA%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90%EF%BC%8C%E8%AE%A9%E4%BD%A0%E5%AD%A9%E5%AD%90%E8%B5%A2%E5%9C%A8%E7%A7%91%E6%8A%80%E8%B5%B7%E8%B7%91%E7%BA%BF%EF%BC%81/4.png" class="" title="这是一张图片">
+<hr>
+<h1 id="CodeCombat"><a href="#CodeCombat" class="headerlink" title="CodeCombat"></a>CodeCombat</h1><p>推荐指数：★★★☆☆  </p>
+<p>适宜年龄：8-14岁  </p>
+<p>官网网址：<a target="_blank" rel="noopener" href="https://codecombat.com/">https://codecombat.com</a>  </p>
+<p>简介：CodeCombat是一个在线编程游戏平台，孩子们可以通过玩游戏来学习编程。在游戏中，孩子们需要编写代码来控制游戏中的角色，完成各种任务和挑战。CodeCombat的游戏环境生动有趣，能够激发孩子们的学习兴趣和创造力。</p>
+<img src="/2023/09/23/%E3%80%90%E5%BF%85%E5%A4%87%E3%80%915%E4%B8%AA%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90%EF%BC%8C%E8%AE%A9%E4%BD%A0%E5%AD%A9%E5%AD%90%E8%B5%A2%E5%9C%A8%E7%A7%91%E6%8A%80%E8%B5%B7%E8%B7%91%E7%BA%BF%EF%BC%81/5.png" class="" title="这是一张图片"></article><!-- lincense--><div class="license-wrapper"><p> <span>Author:  </span><a href="http://example.com">Xiaoxin</a></p><p> <span>Link:  </span><a href="http://example.com/2023/09/23/%E3%80%90%E5%BF%85%E5%A4%87%E3%80%915%E4%B8%AA%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90%EF%BC%8C%E8%AE%A9%E4%BD%A0%E5%AD%A9%E5%AD%90%E8%B5%A2%E5%9C%A8%E7%A7%91%E6%8A%80%E8%B5%B7%E8%B7%91%E7%BA%BF%EF%BC%81/">http://example.com/2023/09/23/%E3%80%90%E5%BF%85%E5%A4%87%E3%80%915%E4%B8%AA%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90%EF%BC%8C%E8%AE%A9%E4%BD%A0%E5%AD%A9%E5%AD%90%E8%B5%A2%E5%9C%A8%E7%A7%91%E6%8A%80%E8%B5%B7%E8%B7%91%E7%BA%BF%EF%BC%81/</a></p><p> <span>Copyright:  </span><span>All articles in this blog are licensed under <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/3.0">CC BY-NC-SA 3.0</a> unless stating additionally.</span></p></div><div class="post-paginator"><a class="nextSlogan" href="/2023/09/17/%E6%8E%A2%E7%B4%A2%E5%8F%A4%E8%80%81%E6%96%87%E6%98%8E%E7%9A%84%E7%A5%9E%E7%A7%98%E4%B9%8B%E8%B0%9C/" title="探索古老文明的神秘之谜"><span>NextPost ></span><br><span class="nextTitle">探索古老文明的神秘之谜</span></a><div class="clear"></div></div><div id="comment"></div></section></article><footer id="cxo-footer-outer"><div id="cxo-footer-inner"><p class="footer-container"><span>Site by </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span> | theme </span><a target="_blank" rel="noopener" href="https://github.com/Longlongyu/hexo-theme-Cxo"><span>Cxo</span></a></p><i class="fa fa-user"> </i><span id="busuanzi_value_site_uv"></span><span> | </span><i class="fa fa-eye"> </i><span id="busuanzi_value_site_pv"></span></div></footer><!-- catelog--><div class="toc-wrapper" style="top: 70vh;"><div class="toc-catalog"><i class="fa fa-list"> </i><span>CATALOG</span></div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%BF%85%E5%A4%87%E3%80%915%E4%B8%AA%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90%EF%BC%8C%E8%AE%A9%E4%BD%A0%E5%AD%A9%E5%AD%90%E8%B5%A2%E5%9C%A8%E7%A7%91%E6%8A%80%E8%B5%B7%E8%B7%91%E7%BA%BF%EF%BC%81"><span class="toc-number">1.</span> <span class="toc-text">【必备】5个少儿编程网站推荐，让你孩子赢在科技起跑线！</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Code-org"><span class="toc-number"></span> <span class="toc-text">Code.org</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tynker"><span class="toc-number"></span> <span class="toc-text">Tynker</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ScratchJr"><span class="toc-number"></span> <span class="toc-text">ScratchJr</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Kodable"><span class="toc-number"></span> <span class="toc-text">Kodable</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CodeCombat"><span class="toc-number"></span> <span class="toc-text">CodeCombat</span></a></div><!-- top--><i class="fa fa-arrow-up close" id="go-up" aria-hidden="true"></i></body></html>
